@@ -45,7 +45,7 @@
 
 ### Manutenibilità
 - Il codice deve essere ben organizzato e documentato per facilitare la manutenzione e l'aggiornamento futuro.
-- Utilizzare best practice di sviluppo software (es. seguire uno stile di codifica coerente, scrivere test automatici).
+- Utilizzare best practice di sviluppo software
 
 ### Persistenza dei dati
 - I dati devono essere salvati e recuperati in modo affidabile, anche dopo la chiusura e riapertura della pagina.
