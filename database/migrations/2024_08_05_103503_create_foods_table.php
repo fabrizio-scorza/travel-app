@@ -11,9 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('food', function (Blueprint $table) {
+        Schema::create('foods', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('stop_id');
+            $table->string('title', 150);
+            $table->text('description')->nullable();
+            $table->string('thumb');
             $table->timestamps();
+
+            $table->foreign('stop_id')->references('id')->on('stops')->cascadeOnDelete();
         });
     }
 
@@ -22,6 +28,9 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('stops', function (Blueprint $table){
+            $table->dropForeign(['stop_id']);
+        });
         Schema::dropIfExists('food');
     }
 };
