@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Food extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['title', 'description', 'thumb'];
+
+    public function stop(){
+        return $this->belongsTo(Stop::class);
+    }
 }

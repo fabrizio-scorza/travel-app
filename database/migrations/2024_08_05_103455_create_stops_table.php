@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('note')->nullable();
             $table->tinyInteger('vote')->unsigned()->nullable();
             $table->timestamps();
-            $table->timestamps();
 
             $table->foreign('travel_id')->references('id')->on('travels')->cascadeOnDelete();
         });
