@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('foods', function (Blueprint $table) {
+        Schema::create('travel', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('stop_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('title', 150);
             $table->text('description')->nullable();
-            $table->string('thumb');
+            $table->string('thumb')->nullable();
+            $table->dateTime('departure_date');
+            $table->dateTime('return_date');
             $table->timestamps();
 
-            $table->foreign('stop_id')->references('id')->on('stops')->cascadeOnDelete();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
         });
     }
 
@@ -28,9 +30,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('foods', function (Blueprint $table){
-            $table->dropForeign(['stop_id']);
+        Schema::table('travel', function (Blueprint $table){
+            $table->dropForeign(['user_id']);
         });
-        Schema::dropIfExists('food');
+        Schema::dropIfExists('travel');
     }
 };

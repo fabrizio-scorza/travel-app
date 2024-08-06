@@ -16,14 +16,14 @@ return new class extends Migration
             $table->unsignedBigInteger('travel_id');
             $table->string('title', 150);
             $table->text('description')->nullable();
-            $table->string('thumb');
+            $table->string('thumb')->nullable();
             $table->dateTime('date');
             $table->string('curiosity')->nullable();
             $table->string('note')->nullable();
             $table->tinyInteger('vote')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('travel_id')->references('id')->on('travels')->cascadeOnDelete();
+            $table->foreign('travel_id')->references('id')->on('travel')->cascadeOnDelete();
         });
     }
 
