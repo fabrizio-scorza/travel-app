@@ -1,0 +1,14 @@
+.box {
+    background-color: var(--water);
+    border-color: var(--land);
+    color: var(--text-blue);
+    font-weight: 600;
+    
+    &:focus{
+        background-color: var(--water);
+        border-color: var(--land);
+        box-shadow:none;
+        color: var(--text-blue);
+        
+    }
+}

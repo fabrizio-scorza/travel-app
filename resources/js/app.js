@@ -7,8 +7,8 @@ import.meta.glob([
 ])
 
 import { createApp } from "vue";
-import TestComponents from './Components/TestComponents.vue';
+
 
 const app = createApp({});
-app.component("test-components", TestComponents);
+
 app.mount("#app");

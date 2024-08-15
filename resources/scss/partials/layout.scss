@@ -1,0 +1,38 @@
+//palette colori
+
+:root{
+    --water:#8FA9BA;
+    --green:#6FCF97;
+    --land:#B08D57;
+    --deep:#627D98;
+    --sand:#D8B566;
+    --yellow:#F0C050;
+    --red:#B35440;
+    --text-blue: #092C4C;
+}
+
+
+//RESET
+img{
+    max-width: 100%;
+}
+
+a{
+    color: var(--text-blue);
+    text-decoration: none;
+
+}
+
+//BODY
+body{
+    background-color: var(--green);
+}
+
+//CARDS
+.card{
+    --bs-card-border-color: var(--land);
+    border-width: 3px;
+    background-color: var(--deep);
+    color: var(--text-blue);
+    font-weight: 700;
+}
