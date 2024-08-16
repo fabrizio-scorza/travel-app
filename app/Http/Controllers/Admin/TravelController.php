@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Travel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TravelController extends Controller
 {
@@ -13,6 +15,10 @@ class TravelController extends Controller
     public function index()
     {
         //
+        $logged_user_id = Auth::user()->id;
+
+        $travels= Travel::where('user_id', $logged_user_id)->get();
+        return view('admin.travel.index', compact('travels'));
     }
 
     /**

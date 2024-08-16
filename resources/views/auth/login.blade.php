@@ -19,12 +19,12 @@
                         @csrf
 
                         <div class="my-4 row">
-                            <label for="email" class="col-md-4 col-form-label text-md-center">Username</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-center">E-mail</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="text" class="form-control box @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                <input id="email" type="text" class="form-control box @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                @error('usenrame')
+                                @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -49,7 +49,7 @@
                         <div class="mb-4 row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <input class="form-check-input checkbox" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         Ricordami
@@ -58,13 +58,14 @@
                             </div>
                         </div>
 
-                        <div class="mb-4 row">
-                            <div class="col-md-8 offset-md-4 d-flex gap-3 align-items-center">
+                        <div class="mb-4 row justify-content-lg-end">
+                            <div class="col-lg-8 d-flex align-items-center gap-3 gap-lg-4">
                                 <button type="submit" class="btn btn-sand">
                                     Accedi
                                 </button>
 
                                 <span>o</span>
+
                                 @if (Route::has('register'))
                                 <a class="btn btn-sand" href="{{ route('register') }}">
                                     Registrati

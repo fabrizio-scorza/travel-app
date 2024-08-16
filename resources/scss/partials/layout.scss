@@ -32,7 +32,11 @@ body{
 .card{
     --bs-card-border-color: var(--land);
     border-width: 3px;
-    background-color: var(--deep);
+    background-color: var(--water);
     color: var(--text-blue);
     font-weight: 700;
+}
+.card-header{
+    background-color: var(--deep);
+    border-bottom: 2px solid var(--land);
 }

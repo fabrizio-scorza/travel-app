@@ -22,6 +22,18 @@
 <body>
     <div id="app"> 
         <main class="">
+            @auth
+                <nav class="d-flex flex-row-reverse mt-4 me-4">
+                    <a class="nav-link btn btn-sand" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Esci
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
+                </nav>
+            @endauth
+
             @yield('content')
         </main>
     </div>
