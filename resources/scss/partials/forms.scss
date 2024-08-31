@@ -1,7 +1,23 @@
-.box, .box:focus, .checkbox , .checkbox:focus, .checkbox:checked {
+.box, .box:focus,.checkbox , .checkbox:focus, .checkbox:checked {
     background-color: var(--water);
     border-color: var(--land);
     color: var(--text-blue);
     font-weight: 600;
     box-shadow:none;
+}
+
+.box::placeholder{
+    color: var(--text-blue);
+}
+
+input[type="file"].box::-webkit-file-upload-button {
+    background-color: var(--sand);
+    color: var(--text-blue);
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+label{
+    font-weight: 600;
 }

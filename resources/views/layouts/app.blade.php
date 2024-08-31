@@ -35,6 +35,7 @@
             @endauth
 
             @yield('content')
+            
         </main>
     </div>
 </body>

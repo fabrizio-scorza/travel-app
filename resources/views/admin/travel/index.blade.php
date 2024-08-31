@@ -12,6 +12,9 @@
 
 <div class="container mt-4">
     <div class="row justify-content-center">
+        <div class="text-center">
+            <button class="btn btn-sand mb-3"> <a href="{{route('admin.travel.create')}}" class="link-underline link-underline-opacity-0">Nuovo Viaggio</a></button>
+        </div>
         @foreach ($travels as $travel)
             <div class="col">
                 <div class="card">

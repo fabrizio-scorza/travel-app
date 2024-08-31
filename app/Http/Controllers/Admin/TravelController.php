@@ -27,6 +27,7 @@ class TravelController extends Controller
     public function create()
     {
         //
+        return view('admin.travel.create');
     }
 
     /**
